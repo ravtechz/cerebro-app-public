@@ -1,5 +1,9 @@
 # Cerebro
 
+<p align="center">
+  <img src="cerebro.png" alt="Cerebro pe iPhone: Inbox-ul cu doua note in curs de categorizare, tema Synthwave" width="320">
+</p>
+
 Aplicatie de notite in stil chat, care ruleaza pe serverul tau. Scrii o idee
 ca intr-un chat, nota apare instant pe telefon, iar un LLM care ruleaza **local,
 pe serverul tau** o pune singur in categoria potrivita: „Idei YouTube”, „Filme”,
