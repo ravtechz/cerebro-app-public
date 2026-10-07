@@ -1,0 +1,69 @@
+/* Cerebro — teme (design tokens)
+   Aplica pe elementul rada: <div class="cb-root" data-theme="pastel"> … </div>
+   .cb-root tine valorile fallback (synthwave). */
+
+.cb-root{
+--bg:#241B2F;--surface:#2D2440;--surface2:#1A1422;--line:#34294F;
+--ink:#F8F8F2;--ink-dim:#B6B1B9;--ink-faint:rgba(248,248,242,.28);
+--accent:#FF7EDB;--accent-ink:#241B2F;--nav-bg:#2D2440;--nav-fg:#B6B1B9;
+--nav-hover:rgba(255,126,219,.06);--nav-active:rgba(255,126,219,.10);--link:#36F9F6;
+--st-pending:#848BBD;--st-cat:#36F9F6;--st-synced:#FF7EDB;--st-err:#FEDE5D;
+--scrim:rgba(26,20,34,.62);--radius:10px;--radius-input:26px;--scan:.05;
+--card-glow:0 0 10px rgba(54,249,246,.35),0 0 22px rgba(54,249,246,.16);
+--logo-glow:0 0 10px rgba(255,126,219,.5);--btn-glow:0 0 12px rgba(255,126,219,.45),0 0 24px rgba(255,126,219,.2);
+--fd:'Bungee',monospace;--fd-tr:uppercase;--fd-ls:.04em;--fd-size:13px;--fd-wt:400;
+--fb:'Space Mono',ui-monospace,monospace;--body-size:13px;--bd-w:1px;
+--chip-tr:uppercase;--chip-ls:.14em;--meta-tr:uppercase;--meta-ls:.14em;
+}
+
+[data-theme="blush"]{
+--bg:#FFF6FA;--surface:#FFFFFF;--surface2:#FFF0F6;--line:#F2DBE6;
+--ink:#4A2C3D;--ink-dim:#8C6B7C;--ink-faint:rgba(74,44,61,.45);
+--accent:#FF5C9E;--accent-ink:#FFFFFF;--nav-bg:#FFEAF3;--nav-fg:#8C6B7C;
+--nav-hover:rgba(255,92,158,.09);--nav-active:rgba(255,92,158,.15);--link:#B857D6;
+--st-pending:#B9A0AE;--st-cat:#8B6BE0;--st-synced:#FF5C9E;--st-err:#E8823C;
+--scrim:rgba(74,44,61,.26);--radius:16px;--radius-input:24px;--scan:0;
+--card-glow:0 6px 20px rgba(255,92,158,.20);--logo-glow:none;--btn-glow:0 4px 14px rgba(255,92,158,.38);
+--fd:'Excalifont','Gaegu',cursive;--fd-tr:none;--fd-ls:0;--fd-size:19px;--fd-wt:400;
+--fb:'Excalifont','Gaegu',cursive;--body-size:15px;
+--chip-tr:lowercase;--chip-ls:.02em;--meta-tr:lowercase;--meta-ls:.02em;
+}
+
+[data-theme="pastel"]{
+--bg:#F8F5EF;--surface:#FFFFFF;--surface2:#F1EEFF;--line:#E6E0D4;
+--ink:#2F2A24;--ink-dim:#7C7568;--ink-faint:rgba(47,42,36,.42);
+--accent:#6C5CE7;--accent-ink:#FFFFFF;--nav-bg:#FFFDF8;--nav-fg:#7C7568;
+--nav-hover:rgba(108,92,231,.07);--nav-active:rgba(108,92,231,.13);--link:#6C5CE7;
+--st-pending:#A79F90;--st-cat:#6C5CE7;--st-synced:#2E9E77;--st-err:#D9822B;
+--scrim:rgba(47,42,36,.22);--radius:14px;--radius-input:16px;--scan:0;
+--card-glow:0 4px 16px rgba(47,42,36,.08);--logo-glow:none;--btn-glow:0 4px 12px rgba(108,92,231,.28);
+--fd:'Nunito',sans-serif;--fd-tr:none;--fd-ls:-.01em;--fd-size:18px;--fd-wt:800;
+--fb:'Nunito',sans-serif;--body-size:14px;--bd-w:1.5px;
+--chip-tr:uppercase;--chip-ls:.10em;--meta-tr:uppercase;--meta-ls:.10em;
+}
+
+[data-theme="almanac"]{
+--bg:#F3EEE4;--surface:#FBF8F1;--surface2:#EBE3D4;--line:#DBD1BE;
+--ink:#2B2A26;--ink-dim:#6E6656;--ink-faint:rgba(43,42,38,.45);
+--accent:#B4471F;--accent-ink:#FBF8F1;--nav-bg:#E9E1D3;--nav-fg:#6E6656;
+--nav-hover:rgba(180,71,31,.07);--nav-active:rgba(180,71,31,.12);--link:#1F6F5C;
+--st-pending:#8C8574;--st-cat:#1F6F5C;--st-synced:#B4471F;--st-err:#B8891C;
+--scrim:rgba(43,42,38,.24);--radius:3px;--radius-input:4px;--scan:0;
+--card-glow:0 1px 2px rgba(43,42,38,.10);--logo-glow:none;--btn-glow:none;
+--fd:'Instrument Serif',serif;--fd-tr:none;--fd-ls:.01em;--fd-size:21px;--fd-wt:400;
+--fb:'Newsreader',Georgia,serif;--body-size:15px;
+--chip-tr:uppercase;--chip-ls:.10em;--meta-tr:none;--meta-ls:.02em;
+}
+
+[data-theme="nebula"]{
+--bg:#0E1220;--surface:#161C2E;--surface2:#0A0E1A;--line:#242C44;
+--ink:#E7EAF3;--ink-dim:#8D97B4;--ink-faint:rgba(231,234,243,.32);
+--accent:#7C8CFF;--accent-ink:#0E1220;--nav-bg:#121728;--nav-fg:#8D97B4;
+--nav-hover:rgba(124,140,255,.08);--nav-active:rgba(124,140,255,.14);--link:#5FE3C0;
+--st-pending:#6C7796;--st-cat:#5FE3C0;--st-synced:#7C8CFF;--st-err:#FF8A7A;
+--scrim:rgba(10,14,26,.66);--radius:12px;--radius-input:14px;--scan:0;
+--card-glow:0 0 0 1px rgba(95,227,192,.38);--logo-glow:none;--btn-glow:0 6px 18px rgba(124,140,255,.32);
+--fd:'Space Grotesk',sans-serif;--fd-tr:none;--fd-ls:-.01em;--fd-size:17px;--fd-wt:700;
+--fb:'JetBrains Mono',ui-monospace,monospace;--body-size:12.5px;
+--chip-tr:uppercase;--chip-ls:.10em;--meta-tr:uppercase;--meta-ls:.10em;
+}

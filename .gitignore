@@ -1,0 +1,22 @@
+# Personal command log, if you keep one: it tends to collect passwords and IPs.
+# Stays local — never in history.
+work.sh
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Excalidraw autosave/backups
+*.excalidraw.bak
+
+# Python
+__pycache__/
+*.pyc
+
+# Python venvs
+.venv/
+venv/

@@ -1,0 +1,14 @@
+[Unit]
+Description=Daily Cerebro trash retention purge
+
+[Timer]
+OnCalendar=daily
+# The NAS is not always on. Persistent replays the run that was missed while it
+# was down, instead of silently skipping a day.
+Persistent=true
+# Nothing else starts at 00:00, but retention is not urgent to the minute and a
+# spread-out start keeps it off the same tick as anything added later.
+RandomizedDelaySec=30m
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,35 @@
+[Unit]
+Description=Cerebro API
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=cerebro
+Group=cerebro
+WorkingDirectory=/opt/cerebro/backend
+EnvironmentFile=/opt/cerebro/backend/.env
+
+# ProtectHome=true below makes /home unreadable to this service. asyncpg resolves
+# the default libpq client-certificate path (~/.postgresql/postgresql.key) while
+# parsing the DSN and calls .exists() on it — under a hidden /home that raises
+# PermissionError instead of returning False, and startup dies in a restart loop.
+# Pointing HOME at the app directory makes the probe answer "no" cleanly.
+Environment=HOME=/opt/cerebro
+ExecStart=/opt/cerebro/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=3
+
+# The service needs nothing outside its own directory.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/cerebro
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cerebro-api
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Cerebro",
+    "slug": "cerebro",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "cerebro",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#241B2F",
+    "splash": {
+      "backgroundColor": "#241B2F",
+      "resizeMode": "contain",
+      "image": "./assets/splash-icon.png"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.cerebro",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "NSLocalNetworkUsageDescription": "Cerebro trimite notele catre serverul tau de pe NAS, prin Tailscale."
+      }
+    },
+    "android": {
+      "package": "com.example.cerebro",
+      "adaptiveIcon": {
+        "backgroundColor": "#241B2F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-font"
+    ]
+  }
+}

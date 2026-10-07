@@ -1,0 +1,29 @@
+[Unit]
+Description=Cerebro trash retention purge
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=cerebro
+Group=cerebro
+WorkingDirectory=/opt/cerebro/backend
+EnvironmentFile=/opt/cerebro/backend/.env
+
+# Same reason as in cerebro-api.service: ProtectHome=true below hides /home, and
+# asyncpg probes ~/.postgresql/postgresql.key while parsing the DSN, which raises
+# PermissionError instead of returning False. Pointing HOME at the app directory
+# makes that probe answer "no" cleanly. Do not drop this line.
+Environment=HOME=/opt/cerebro
+ExecStart=/opt/cerebro/venv/bin/python -m app.purge
+
+# The job needs nothing outside its own directory.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/cerebro
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cerebro-purge
